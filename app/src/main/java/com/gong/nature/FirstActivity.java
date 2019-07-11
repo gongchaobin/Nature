@@ -33,6 +33,14 @@ public class FirstActivity extends AppCompatActivity{
                 startActivity(new Intent(FirstActivity.this,HandlerThreadActivity.class));
             }
         });
+
+        findViewById(R.id.button3).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(FirstActivity.this,DrawableActivity.class));
+            }
+        });
+
     }
 
 
