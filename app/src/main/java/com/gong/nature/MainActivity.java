@@ -1,11 +1,7 @@
 package com.gong.nature;
 
 import android.app.Activity;
-import android.content.ActivityNotFoundException;
 import android.content.Context;
-import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Message;
 import android.os.PowerManager;
@@ -41,23 +37,6 @@ public class MainActivity extends BaseActivity {
 
     }
 
-    /**
-     * 隐式跳转之前，检测activity是否存在
-     * @param url
-     * @param nameType
-     */
-    public void viewUrl(String url,String nameType) {
-        Intent intent = new Intent(Intent.ACTION_VIEW);
-        intent.setDataAndType(Uri.parse(url),nameType);
-
-        if(getPackageManager().resolveActivity(intent, PackageManager.MATCH_DEFAULT_ONLY) != null) {
-            try {
-                startActivity(intent);
-            } catch (ActivityNotFoundException e) {
-                e.printStackTrace();
-            }
-        }
-    }
 
     class PagerAdapter extends FragmentStatePagerAdapter {
         private RecyclerView.RecycledViewPool mPool = new RecyclerView.RecycledViewPool();

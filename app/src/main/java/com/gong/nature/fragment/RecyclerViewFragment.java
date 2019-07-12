@@ -5,7 +5,6 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,6 +25,15 @@ public class RecyclerViewFragment extends Fragment{
 
     private RecyclerView.RecycledViewPool mViewPool;
     private List<String> mArrays;
+
+    public static RecyclerViewFragment newInstance() {
+
+        Bundle args = new Bundle();
+        
+        RecyclerViewFragment fragment = new RecyclerViewFragment();
+        fragment.setArguments(args);
+        return fragment;
+    }
 
 
     @Nullable
@@ -50,7 +58,6 @@ public class RecyclerViewFragment extends Fragment{
 
         return rv;
     }
-
 
     public void setViewPool(RecyclerView.RecycledViewPool viewPool) {
         mViewPool = viewPool;
