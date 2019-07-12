@@ -41,6 +41,13 @@ public class FirstActivity extends AppCompatActivity{
             }
         });
 
+        findViewById(R.id.button4).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(FirstActivity.this,SurfaceViewActivity.class));
+            }
+        });
+
     }
 
 

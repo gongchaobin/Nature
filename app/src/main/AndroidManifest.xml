@@ -21,6 +21,7 @@
         <activity android:name=".MainActivity"/>
         <activity android:name=".HandlerThreadActivity"/>
         <activity android:name=".DrawableActivity"/>
+        <activity android:name=".SurfaceViewActivity"/>
 
     </application>
     
